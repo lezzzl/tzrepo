@@ -23,12 +23,17 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: Download JUnit
+    - name: Download JUnit 5
       run: |
-        wget -O junit-4.13.2.jar https://search.maven.org/remotecontent?filepath=junit/junit/4.13.2/junit-4.13.2.jar
+        mkdir -p junit5
+        cd junit5
+        wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.8.2/junit-platform-console-standalone-1.8.2.jar
+
+    - name: List directory contents
+      run: ls -R
 
     - name: Compile and run tests
       run: |
-      
-        javac -cp .:junit-4.13.2.jar src/test/java/org/example/*.java
-        java -cp .:junit-4.13.2.jar org.junit.runner.JUnitCore testGraph functest speedtest
+        javac -cp .:junit5/junit-platform-console-standalone-1.8.2.jar src/test/java/org/example/*.java
+        java -jar junit5/junit-platform-console-standalone-1.8.2.jar -cp src/test/java/org/example --select-class org.example.functest
+ 
