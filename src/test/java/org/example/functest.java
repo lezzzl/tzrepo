@@ -29,7 +29,7 @@ public class functest { ;
         assertEquals(5, multifunc._max(multifunc.readFromFile("test4.txt")));
         assertEquals(3, multifunc._max(multifunc.readFromFile("test5.txt")));
     }
-
+1
     @Test
     public void testSum() throws IOException {
         multifunc multifunc = new multifunc();
