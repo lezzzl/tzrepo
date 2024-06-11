@@ -1,27 +1,20 @@
 package org.example;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
+
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.annotations.Fork;
-import org.openjdk.jmh.infra.Blackhole;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.runner.Runner;
-import org.openjdk.jmh.runner.RunnerException;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
+
 import java.util.concurrent.TimeUnit;
-import org.junit.Rule;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 
 @RunWith(JUnit4.class)
-public class speedtest {
+public class speedtestBENCH {
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
