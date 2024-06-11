@@ -1,6 +1,7 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+import org.example.multifunc;
 
 import java.io.IOException;
 import java.math.BigInteger;
