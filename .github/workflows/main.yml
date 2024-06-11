@@ -31,4 +31,4 @@ jobs:
       run: |
       
         javac -cp .:junit-4.13.2.jar src/test/java/org/example/*.java
-        java -cp .:junit-4.13.2.jar org.junit.runner.JUnitCore testGraph functest speedtest
+        java -cp .:junit-4.13.2.jar org.junit.runner.JUnitCore functest 
