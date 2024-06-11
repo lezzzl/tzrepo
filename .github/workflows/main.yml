@@ -26,3 +26,22 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Tests
       run: mvn -B test --file pom.xml
+
+    - name: Failure send
+      if: failure()
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.BOT_ID }}
+        CHAT_ID: ${{ secrets.CHAT_ID }}
+      run: |
+            MESSAGE="Якорь мне в бухту! Мы идем на дно!"
+            FAILED_TESTS=$(grep '<<< FAILURE!' target/surefire-reports/org.example.NumbersProcessorTest.txt)
+            curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d "chat_id=${CHAT_ID}&text=${MESSAGE} ${FAILED_TESTS}"
+    - name: Success send
+      if: success()
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.BOT_ID }}
+        CHAT_ID: ${{ secrets.CHAT_ID }}
+      run: |
+        MESSAGE="Тысяча вонючих китов и ржавых медуз! Наша шхуна все еще на плаву!"
+        curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage -d "chat_id=${CHAT_ID}&text=${MESSAGE}"
+    
