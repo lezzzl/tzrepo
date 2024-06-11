@@ -1,2 +1,3 @@
 # tzrepo
-![Java CI](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/actions/workflows/ci.yml/badge.svg)
+![Java CI with Maven](https://github.com/lezzzl/tzrepo/actions/workflows/main.yml/badge.svg?event=push)
+
