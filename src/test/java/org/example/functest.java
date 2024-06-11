@@ -66,3 +66,4 @@ public class functest { ;
         assertEquals(-1, multifunc._min(ans));
     }
 }
+//
