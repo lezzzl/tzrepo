@@ -29,5 +29,6 @@ jobs:
 
     - name: Compile and run tests
       run: |
-        javac -cp .:junit-4.13.2.jar *.java
+      
+        javac -cp .:junit-4.13.2.jar src/test/java/org/example/*.java
         java -cp .:junit-4.13.2.jar org.junit.runner.JUnitCore testGraph functest speedtest
