@@ -60,7 +60,7 @@ jobs:
     - name: Build with Maven
       run: |
         mvn -B package --file pom.xml
-        java -cp target/classes org.example.speedtestBENCH
+        java -cp target/classes:~/.m2/repository/org/openjdk/jmh/jmh-core/1.33/* org.example.speedtestBENCH
     - name: Failure send
       if: failure()
       env:
