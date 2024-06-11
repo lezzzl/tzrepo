@@ -1,3 +1,3 @@
 # tzrepo
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Java CI with maven](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 
