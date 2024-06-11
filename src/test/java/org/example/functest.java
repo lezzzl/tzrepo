@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class functest {
+    multifunc multifunc = new multifunc();
     @Test
     public void testMin() throws IOException {
         assertEquals(1, multifunc._min(multifunc.readFromFile("test1.txt")));
