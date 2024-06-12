@@ -9,5 +9,7 @@ input_file: [test1](test1.txt)
 10 2 4 1 5
 ```
 ![image](https://github.com/lezzzl/tzrepo/blob/main/Example_1.jpg)
+#### Тесты для проверки корректности функций поиска минимума, максимума, сложения и умножения:
+В файлах [test1](test1.txt), [test2](test2.txt), [test3](test3.txt), [test4](test4.txt), [test5](test5.txt) хранятся тесты для запуска файла [functest.java](src/test/java/org/example/functest.java) (path: *src/test/java/org/example/functest.java*), в котором реализованы UNIT-тесты для проерки корректности работы функций
 
 
