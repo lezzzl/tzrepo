@@ -38,7 +38,7 @@ public class functest { ;
         assertEquals(5, multifunc._sum(multifunc.readFromFile("test4.txt")));
         assertEquals(6, multifunc._sum(multifunc.readFromFile("test5.txt")));
     }
-
+--
     @Test
     public void testMultiply() throws IOException {
         multifunc multifunc = new multifunc();
