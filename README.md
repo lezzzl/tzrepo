@@ -48,4 +48,9 @@ input_file: [test1](test1.txt)
 #### Интеграция CI-системы и Telegram
 
 Создан бот в телеграмме, который отправляет сообщение в группу в телеграмме (https://t.me/+_M2pEZCv7_FhNTQy) о статусе проуденных тестов
-![image]()
+#### Успешно выполнено
+![image](https://github.com/lezzzl/tzrepo/blob/main/Success.jpg)
+
+#### Ошибка при выполнении
+![image](https://github.com/lezzzl/tzrepo/blob/main/Failure.jpg)
+![image](https://github.com/lezzzl/tzrepo/blob/main/Failure_log.jpg)
